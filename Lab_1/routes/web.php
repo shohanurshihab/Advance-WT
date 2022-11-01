@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [routecontroller::class, 'index'])->name('home');
-Route::view("service","service")->name('service');
-Route::view("team","team")->name('team');
+Route::get('/service', [routecontroller::class, 'products'])->name('service');
+Route::get('/team', [routecontroller::class, 'team'])->name('team');
 Route::view("about","about")->name('about');
 Route::view("contact","contact")->name('contact');
