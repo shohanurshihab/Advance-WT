@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\loginController;
+use App\Http\Controllers\routeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegController;
 use App\Http\Controllers\UserlistController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,12 +25,13 @@ Route::get('/', function () {
 
 
 // Route::get('/login', [loginController::class, 'index'])->name('login');
-Route::post("users",[UserController::class,'getData']);
+Route::post("dash",[UserController::class,'getData']);
+//Route::post("profile",[UserController::class,'profile']);
 
 Route::post("reg",[RegController::class,'inputdata']);
 Route::view("login","users");
 Route::view("reg","reg");
-Route::post("reg",[RegController::class,'addData']);
+Route::post("users",[RegController::class,'addData']);
 Route::view("dash","dash");
 Route::view("profile","profile");
 Route::view("edit","edit");
@@ -39,3 +41,11 @@ Route::get("delete/{id}",[UserlistController::class,'delete']);
 Route::get("edit/{id}",[UserlistController::class,'showdata']);
 Route::post("edit",[UserlistController::class,'update']);
 Route::view("userid","userid");
+
+
+Route::get('/home', [routecontroller::class, 'index'])->name('home');
+Route::get('/service', [routecontroller::class, 'products'])->name('service');
+Route::get('/team', [routecontroller::class, 'team'])->name('team');
+Route::view("about","about")->name('about');
+Route::view("dash","dash")->name('dash');
+Route::view("contact","contact")->name('contact');

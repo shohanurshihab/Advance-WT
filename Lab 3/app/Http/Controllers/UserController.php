@@ -14,8 +14,6 @@ class UserController extends Controller
             'password'=>'required | min:5'
             
             ]);
-       return $req->input();
-    }
-
- 
+       return view("dash");
+    } 
 }

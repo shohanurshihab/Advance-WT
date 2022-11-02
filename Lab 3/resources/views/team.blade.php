@@ -1,4 +1,10 @@
 @extends('layouts.app')
 @section('content')
-<center><h1>Profile</h1></center>
+
+
+@foreach($names as $n)
+<li>{{$n}}</li>
+@endforeach
+
 @endsection
+

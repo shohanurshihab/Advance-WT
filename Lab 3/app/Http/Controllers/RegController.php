@@ -30,7 +30,7 @@ class RegController extends Controller
         $member->gender=$req->gender;
         $member->password=$req->password;
         $member->save();
-        return redirect('userlist');
+        return view('users');
 
     }
 
