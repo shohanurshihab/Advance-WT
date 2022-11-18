@@ -1,2 +1,2 @@
-<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"></p>
+<p align="center"><img src="https://avatars.githubusercontent.com/u/25158?s=280&v=4"></p>
 
